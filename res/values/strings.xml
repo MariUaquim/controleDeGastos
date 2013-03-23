@@ -12,33 +12,24 @@
     <string name="title_activity_relatorios">Relatorios</string>
     <string name="btn_cadastro_poupanca">Cadastar Poupanca</string>
     <string name="btn_cadastro_ganho">Cadastrar Ganho</string>
-    <string name="btn_alterar_saldo">Alterar Saldo</string>
     <string name="btn_cadastro_gasto">Cadastrar Gasto</string>
     <string name="btn_relatorios">Relatorios</string>
-    <string name="btn_transferencia">Transferir Dinheiro</string>
     <string name="btn_visualiza_ganhos">Visualizar Ganhos</string>
     <string name="btn_visualiza_gastos">Visualizar Gastos</string>
-    <string name="btn_visualizar_poupancas">Visualizar Poupanças</string>
-    <string name="btn_cadastrar_planilha">Cadastrar Planilha</string>
-    <string name="btn_opcoes">Opções</string>
-    <string name="txv_operacoes">Operacoes</string>
+    <string name="txv_nome_recurso">Meu recurso</string>
     <string name="txv_saldo">Saldo: R$</string>
-    <string name="txv_saldo_geral">Saldo Geral: </string>
     <string name="txv_novo_saldo">Novo saldo</string>
-    <string name="txv_nome_planilha">Nome da Planilha</string>
-    <string name="txv_tipo_planilha">Tipo da Planilha</string>
-    <string name="lbl_planilhas">Planilhas:</string>
     <string name="edit_novo_valor">Informe o novo valor</string>
     <string name="btn_confirma">Confirma</string>
+    
     <string name="txv_nome_ganho">Nome do ganho</string>
     <string name="txv_nome_gasto">Nome do gasto</string>
     <string name="edit_nome_ganho">Informe o nome do ganho</string>
     <string name="edit_nome_gasto">Informe o nome do gasto</string>
-    <string name="edit_nome_planilha">Nome da nova planilha</string>
     <string name="txv_valor">Valor</string>
     <string name="edit_valor">Informe o valor</string>
     <string name="txv_categoria">Categoria</string>
-
+    
     <string-array name="categoria_array">
         <item>Comida</item>
         <item>Bebida</item>
@@ -48,10 +39,5 @@
         <item>Conta</item>
     </string-array>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_operacoes_planilha">Operacoes_planilha</string>
-    <string name="title_activity_opcoes">Opcoes</string>
-    <string name="title_activity_cadastrar_planilha">CadastrarPlanilha</string>
-    <string name="title_activity_visualiza_poupancas">VisualizaPoupancas</string>
 
 </resources>

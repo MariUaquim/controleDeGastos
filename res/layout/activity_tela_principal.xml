@@ -9,8 +9,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:text="@string/txv_saldo_geral"
+        android:layout_gravity="center"
+        android:text="@string/txv_nome_recurso"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -19,32 +19,67 @@
     <Button
         android:layout_width="match_parent"      
         android:layout_height="wrap_content"
-        android:text="@string/btn_opcoes"
+        android:text="@string/btn_cadastro_poupanca"
         android:background="@color/dark"
         android:textColor="@color/light_green"
-        android:onClick="IrOpcoes"
+        android:onClick="IrAlterarSaldo"
         android:layout_margin="5dp" />
-        
-    <TextView
-        android:id="@+id/lbl_planilhas"
-        android:layout_width="wrap_content"
+    
+    <Button
+        android:layout_width="match_parent"       
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/lbl_planilhas"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="25sp"
+        android:text="@string/btn_cadastro_ganho"
+        android:background="@color/dark"
+        android:textColor="@color/light_green"
+        android:onClick="IrCadastroGanho"
+        android:layout_margin="5dp" />
+    
+    <Button
+        android:layout_width="match_parent"       
+        android:layout_height="wrap_content"
+        android:text="@string/btn_cadastro_gasto"
+        android:background="@color/dark"
+        android:textColor="@color/light_green"
+        android:onClick="IrCadastroGasto"
+        android:layout_margin="5dp" />
+    
+    <Button
+        android:layout_width="match_parent"        
+        android:layout_height="wrap_content"
+        android:text="@string/btn_relatorios"
+        android:background="@color/dark"
+        android:textColor="@color/light_green"
+        android:onClick="IrRelatorios"
+        android:layout_margin="5dp" />
+    
+    <Button
+        android:layout_width="match_parent"       
+        android:layout_height="wrap_content"
+        android:text="@string/btn_visualiza_ganhos"
+        android:background="@color/dark"
+        android:textColor="@color/light_green"
+        android:onClick="IrVisualizaGanhos"
+        android:layout_margin="5dp" />
+    
+    <Button
+        android:layout_width="match_parent"        
+        android:layout_height="wrap_content"
+        android:text="@string/btn_visualiza_gastos"
+        android:background="@color/dark"
+        android:textColor="@color/light_green"
+        android:onClick="IrVisualizaGastos"
         android:layout_margin="5dp" />
     
     <TextView
-        android:id="@+id/txv_planilhas"
+        android:id="@+id/txv_saldo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text=""
+        android:text="@string/txv_saldo"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:layout_margin="5dp" />
 
+    
 </LinearLayout>
