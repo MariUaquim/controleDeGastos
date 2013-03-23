@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".CadastrarPlanilha" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/txv_nome_planilha"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="27sp" />
+      
+    <EditText 
+        android:id="@+id/edt_nome_planilha" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_nome_planilha"
+        android:textSize="25sp" 
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
+        android:background="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txv_tipo_planilha"
+        android:textAlignment="center"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        android:layout_marginTop="20dp" />
+    
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Padrão"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poupança"
+            android:textColor="@color/white" />
+    </RadioGroup>
+    <Button
+        android:id="@+id/confirma_gasto"
+        android:layout_width="match_parent"      
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/btn_confirma"       
+        android:background="@color/dark"
+        android:textColor="@color/light_green"
+        android:onClick="validar"
+        android:layout_margin="5dp" />
+
+</LinearLayout>
