@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlterarSaldo" 
+    android:background="@color/black"
+    android:orientation="vertical">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txv_novo_saldo"
+        android:textAlignment="center"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/white"
+        android:textSize="27sp"       
+        android:layout_marginTop="125dp" />    
+    <EditText android:id="@+id/edit_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_novo_valor"
+        android:textSize="25sp" 
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:inputType="number"/>
+    <Button
+        android:layout_width="match_parent"      
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/btn_confirma"       
+        android:background="@color/dark"
+        android:textColor="@color/light_green"
+        android:onClick="IrAlterarSaldo"
+        android:layout_margin="5dp" />
+
+    
+
+</LinearLayout>
