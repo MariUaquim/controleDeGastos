@@ -60,7 +60,7 @@
         </activity>
         <activity
             android:name="com.example.controlegastos.NomeRecurso"
-            android:label="@string/title_activity_nome_recurso" 
+            android:label="@string/title_activity_nome_recurso"
             android:parentActivityName="com.example.controlegastos.TelaPrincipal" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -73,6 +73,34 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.controlegastos.TelaPrincipal" />
+        </activity>
+        <activity
+            android:name="com.example.controlegastos.OperacoesPlanilha"
+            android:label="@string/title_activity_operacoes_planilha" >
+        </activity>
+        <activity
+            android:name="com.example.controlegastos.Opcoes"
+            android:label="@string/title_activity_opcoes"
+            android:parentActivityName="com.example.controlegastos.TelaPrincipal" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.controlegastos.TelaPrincipal" />
+        </activity>
+        <activity
+            android:name="com.example.controlegastos.CadastrarPlanilha"
+            android:label="@string/title_activity_cadastrar_planilha"
+            android:parentActivityName="com.example.controlegastos.Opcoes" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.controlegastos.Opcoes" />
+        </activity>
+        <activity
+            android:name="com.example.controlegastos.VisualizaPoupancas"
+            android:label="@string/title_activity_visualiza_poupancas"
+            android:parentActivityName="com.example.controlegastos.Opcoes" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.controlegastos.Opcoes" />
         </activity>
     </application>
 
