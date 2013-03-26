@@ -1,5 +1,8 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.example.controlegastos.Database;
 
 import android.database.Cursor;
@@ -13,7 +16,7 @@ public class Planilha {
 	private float meta;
 
 	
-	public  Planilha(int tipo,String nome, float meta){
+	public  Planilha(int tipo, String nome, float meta){
 		this.nome = nome;
 		this.meta = meta;
 		this.tipo = tipo;
@@ -22,9 +25,12 @@ public class Planilha {
 	public Planilha(Cursor c){
 		
 		codigo = c.getInt(c.getColumnIndex("pla_codigo"));
-		nome = c.getString(c.getColumnIndex("pla_codigo"));
+		nome = c.getString(c.getColumnIndex("pla_nome"));
 		tipo = c.getInt(c.getColumnIndex("pla_codigo_tpl"));
-		meta = c.getFloat(c.getColumnIndex("pla_meta"));
+		try{
+			meta = c.getFloat(c.getColumnIndex("pla_meta"));
+		}catch(Exception e){}
+		
 	}
 	public int getCodigo() {
 		return codigo;
@@ -54,6 +60,13 @@ public class Planilha {
 			Database.run(query);
 		}
 	}
+	public static void insert(String nome, int tipo){
+		if(findByNome(nome)== null){
+			String query = "insert into Planilha(pla_nome,pla_codigo_tpl) values ('"+nome+"',"+tipo+")";
+			Database.run(query);
+		}
+	}
+	
 	public static void delete(int codigo){
 		
 		String query = "delete from Planilha where pla_codigo = "+codigo+"";
@@ -70,6 +83,21 @@ public class Planilha {
 			toReturn = null;
 		}
 		c.close();	
+		return toReturn;
+	}
+	
+	public static List<Planilha> findByTipo(int tipo){
+		List<Planilha> toReturn = new ArrayList<Planilha>();  
+		Cursor c =  Database.get("select * from Planilha where pla_codigo_tpl = "+ tipo);
+		try{
+			while(!c.isAfterLast()){
+				   Planilha p = new Planilha(c);  	  
+				   toReturn.add(p); 
+				   c.moveToNext();
+			}	
+		}catch(Exception e){}
+		
+		c.close();
 		return toReturn;
 	}
 	

@@ -38,6 +38,8 @@
     <string name="txv_valor">Valor</string>
     <string name="edit_valor">Informe o valor</string>
     <string name="txv_categoria">Categoria</string>
+    <string name="txv_meta">Meta(em Reais)</string>
+    <string name="edit_meta">valor a alcançar</string>
 
     <string-array name="categoria_array">
         <item>Comida</item>
