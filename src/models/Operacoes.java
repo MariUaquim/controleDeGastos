@@ -13,6 +13,7 @@ import com.example.controlegastos.Database;
 import android.app.AlertDialog;
 import android.database.Cursor;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Operacoes {
 	private int codigo;
@@ -60,18 +61,15 @@ public class Operacoes {
 		return data;
 	}
 
-	public static boolean insert(int codigoPlanilha,String descricao, float valor, int tipoOperacao){
+	public static void insert(int codigoPlanilha,String descricao, float valor, int tipoOperacao,String data,int parcelas,int ativo){
 		
-		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-		Calendar calendar =  Calendar.getInstance();
-		String data = formatter.format(calendar.getTime());
+		//SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		//Calendar calendar =  Calendar.getInstance();
+		//String data = formatter.format(calendar.getTime());
 		
-		if (findByNome(descricao)==null){
-			String query = "insert into Operacoes(ope_descricao,ope_codigo_pla,ope_valor, ope_codigo_top, ope_data) values ('"+descricao+"',"+codigoPlanilha+","+valor+","+tipoOperacao+",'"+data+"')";
-			Database.run(query);
-			return true;
-		}
-		return false;
+		String query = "insert into Operacoes(ope_descricao,ope_codigo_pla,ope_valor, ope_codigo_top, ope_data,ope_parcelas,ope_ativo) values ('"+ descricao +"',"+codigoPlanilha+","+valor+","+tipoOperacao+",'"+data+"',"+parcelas+","+ativo+")";
+		Database.run(query);
+		
 	}
 	public static void delete(){
 		
@@ -122,7 +120,6 @@ public class Operacoes {
 		List<Operacoes> toReturn = new ArrayList<Operacoes>();  
 		Cursor listOperacoes =  Database.get("select * from Operacoes where ope_codigo_pla = "+ planilha +" and ope_codigo_top = "+ tipoOperacao);
 		
-		
 		try{
 			while(!listOperacoes.isAfterLast()){
 				   Operacoes ope = new Operacoes(listOperacoes);  	  
@@ -136,6 +133,7 @@ public class Operacoes {
 		listOperacoes.close();
 		return toReturn;
 	}
+	
 	public static List<Operacoes> findByPlanilha(int planilha){
 		List<Operacoes> toReturn = new ArrayList<Operacoes>();  
 		Cursor listOperacoes =  Database.get("select * from Operacoes where ope_codigo_pla = "+ planilha );
@@ -154,10 +152,29 @@ public class Operacoes {
 		listOperacoes.close();
 		return toReturn;
 	}
+	
+	public static String getSaldoTotalPlanilha(int codigoPlanilha){
+		String toReturn;  
+		Cursor c =  Database.get("select sum(ope_valor) as soma from Operacoes where ope_codigo_pla = "+ codigoPlanilha +" and ope_codigo_top = 1" );
+		Cursor c2 =  Database.get("select sum(ope_valor) as soma from Operacoes where ope_codigo_pla = "+ codigoPlanilha+" and ope_codigo_top = 2" );
+		
+		
+		try{
+			float aux= c.getFloat(c.getColumnIndex("soma")) - c2.getFloat(c2.getColumnIndex("soma"));
+			toReturn = String.valueOf(aux);
+			
+		}catch(Exception e){
+			toReturn = "0";
+		}
+		
+		c.close();
+		c2.close();
+		return toReturn;
+	}
 	public static String getSaldoTotal(){
 		String toReturn;  
-		Cursor c =  Database.get("select sum(ope_valor) as soma from Operacoes where ope_codigo_top = 1" );
-		Cursor c2 =  Database.get("select sum(ope_valor) as soma from Operacoes where ope_codigo_top = 2" );
+		Cursor c =  Database.get("select sum(ope_valor) as soma from Operacoes where ope_codigo_top = 1 " );
+		Cursor c2 =  Database.get("select sum(ope_valor) as soma from Operacoes where ope_codigo_top = 2 " );
 		
 		
 		try{
@@ -173,7 +190,7 @@ public class Operacoes {
 		return toReturn;
 	}
 	public static void create(){
-		String query = "create table if not exists Operacoes (ope_codigo int identify(1,1) primary key, ope_descricao varchar, ope_codigo_pla int, ope_valor float, ope_codigo_top int, ope_data date)";
+		String query = "create table if not exists Operacoes (ope_codigo integer primary key autoincrement, ope_descricao varchar, ope_codigo_pla int,  ope_valor float, ope_codigo_top int, ope_data date, ope_parcelas int, ope_ativo int)";
 		Database.run(query);
 	}
 }

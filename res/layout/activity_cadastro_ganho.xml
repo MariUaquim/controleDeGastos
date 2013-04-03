@@ -42,16 +42,32 @@
         android:layout_margin="5dp"
         android:background="@color/white"
         android:inputType="number"/>
-    <Button
-		android:id="@+id/confirma_ganho"
-        android:layout_width="match_parent"      
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/btn_confirma"       
-        android:background="@color/dark"
-        android:textColor="@color/light_green"
-        android:onClick="validar"
-        android:layout_margin="5dp" /> 
+     <LinearLayout 
+         android:layout_width="wrap_content"      
+	     android:layout_height="wrap_content"
+         android:orientation="horizontal">
+         
+	    <Button
+	        android:id="@+id/confirma_gasto"
+	        android:layout_width="match_parent"      
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:text="@string/btn_confirma"       
+	        android:background="@color/dark"
+	        android:textColor="@color/light_green"
+	        android:onClick="validar"
+	        android:layout_margin="5dp" />
+	    <Button
+	        android:id="@+id/cancela_gasto"
+	        android:layout_width="match_parent"      
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:text="@string/btn_cancelar"       
+	        android:background="@color/dark"
+	        android:textColor="@color/light_green"
+	        android:onClick="cancelar"
+	        android:layout_margin="5dp" />
+	</LinearLayout>
 
     
 

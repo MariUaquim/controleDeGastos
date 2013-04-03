@@ -2,71 +2,180 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroGastos"
     android:background="@color/black"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    tools:context=".CadastroGastos" >
+    
+    <LinearLayout 
+         android:layout_width="wrap_content"      
+	     android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_marginTop="25dp"> 
+    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/txv_nome_gasto"
+	        android:textAlignment="center"
+	        android:layout_marginLeft="5dp"
+	        android:textColor="@color/white"
+	        android:textSize="20sp"
+	         />      
+	    <EditText 
+	        android:id="@+id/nome_gasto" 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/edit_nome_gasto"
+	        android:textSize="20sp" 
+	        android:textColor="@color/black"
+	        android:layout_marginLeft="10dp"
+	        android:background="@color/white"/>
+	</LinearLayout>
+	
+	<LinearLayout 
+         android:layout_width="wrap_content"      
+	     android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_marginTop="25dp"> 
+         
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/txv_valor"
+	        android:textAlignment="center"
+	        android:textSize="20sp"
+	        android:layout_marginLeft="5dp"
+	        android:textColor="@color/white"/>
+	    <EditText 
+	        android:id="@+id/valor_gasto"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/edit_valor"     
+	        android:textColor="@color/black"
+	        android:layout_marginLeft="10dp"
+	        android:background="@color/white"
+	        android:inputType="number"/>
+	 </LinearLayout>
     
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txv_nome_gasto"
+        android:text="@string/txv_tipo_pagamento"
         android:textAlignment="center"
         android:layout_marginLeft="5dp"
         android:textColor="@color/white"
-        android:textSize="27sp"
-        android:layout_marginTop="70dp" />      
-    <EditText 
-        android:id="@+id/nome_gasto" 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/edit_nome_gasto"
-        android:textSize="25sp" 
-        android:textColor="@color/black"
-        android:layout_margin="5dp"
-        android:background="@color/white"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txv_valor"
-        android:textAlignment="center"
-        android:layout_marginLeft="5dp"
-        android:textColor="@color/white"
-        android:textSize="27sp"/>
-    <EditText 
-        android:id="@+id/valor_gasto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/edit_valor"
-        android:textSize="25sp" 
-        android:textColor="@color/black"
-        android:layout_margin="5dp"
-        android:background="@color/white"
-        android:inputType="number"/>   
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txv_categoria"
-        android:textAlignment="center"
-        android:layout_marginLeft="5dp"
-        android:textColor="@color/white"
-        android:textSize="27sp"/>
-    <Spinner
-    	android:id="@+id/categorias_spinner"
-    	android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-    	android:background="@color/white"
-    	android:layout_margin="5dp"/>
-    <Button
-        android:id="@+id/confirma_gasto"
-        android:layout_width="match_parent"      
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/btn_confirma"       
-        android:background="@color/dark"
-        android:textColor="@color/light_green"
-        android:onClick="validar"
-        android:layout_margin="5dp" />
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"/>
+    
+     <LinearLayout 
+         android:layout_width="wrap_content"      
+	     android:layout_height="wrap_content"
+         android:orientation="horizontal">   
+    
+	   	 <Spinner
+	    	android:id="@+id/tipoPagamento"
+	    	android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:background="@color/white"
+	    	android:layout_margin="5dp"/>
+   	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/txv_parcelas"
+	        android:textAlignment="center"
+	        android:layout_marginLeft="60dp"
+	        android:textColor="@color/white"
+	        android:textSize="20sp"/>
+			    
+	      <EditText 
+	        android:id="@+id/edit_parcelas"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/edit_credito"
+	        android:textSize="20sp" 
+	        android:textColor="@color/black"
+	        android:layout_marginLeft="10dp"
+	        android:background="@color/white"
+	        android:inputType="number"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+         android:layout_width="wrap_content"      
+	     android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_marginTop="20dp">
+	     <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/txv_data_inicio"
+	        android:textSize="20sp"
+	        android:textAlignment="center"
+	        android:layout_marginLeft="5dp"
+	        android:textColor="@color/white"/>
+	    
+	    <EditText 
+	        android:id="@+id/dataInicio"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp" 
+	        android:textColor="@color/black"
+	        android:layout_marginLeft="10dp"
+	        android:background="@color/white"
+	        android:editable="false"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+         android:layout_width="wrap_content"      
+	     android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_marginTop="20dp">
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/txv_categoria"
+	        android:textSize="20sp"
+	        android:textAlignment="center"
+	        android:layout_marginLeft="5dp"
+	        android:textColor="@color/white"/>
+	    
+	    <Spinner
+	    	android:id="@+id/categorias_spinner"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:textSize="20sp"
+	    	android:background="@color/white"
+	    	android:layout_marginLeft="10dp"/>
+	    </LinearLayout>
+    
+    <LinearLayout 
+         android:layout_width="wrap_content"      
+	     android:layout_height="wrap_content"
+         android:orientation="horizontal"
+       	 android:layout_marginTop="20dp">
+         
+	    <Button
+	        android:id="@+id/confirma_gasto"
+	        android:layout_width="match_parent"      
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:text="@string/btn_confirma"
+	        android:textSize="25sp"       
+	        android:background="@color/dark"
+	        android:textColor="@color/light_green"
+	        android:onClick="validar"
+	        android:layout_margin="5dp" />
+	    <Button
+	        android:id="@+id/cancela_gasto"
+	        android:layout_width="match_parent"      
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:text="@string/btn_cancelar"
+	        android:textSize="25sp"       
+	        android:background="@color/dark"
+	        android:textColor="@color/light_green"
+	        android:onClick="cancelar"
+	        android:layout_margin="5dp" />
+	</LinearLayout>
 
     
-
 </LinearLayout>

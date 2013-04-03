@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 
 import models.Historico;
 import models.Operacoes;
+import models.Planilha;
 
 import android.app.Activity;
 import android.database.Cursor;
@@ -17,9 +18,10 @@ private static SQLiteDatabase db = null;
 	public static void inicialize(SQLiteDatabase db){
 		Database.db = db;
 		//usr_usuario.create();
-		//Planilha.create();
-		//tpl_tipo_planilha.create();
 		//Operacoes.delete();
+		//Planilha.delete();
+		
+		Planilha.create();
 		Operacoes.create();
 		//Historico.create();
 		//per_periodo.create();

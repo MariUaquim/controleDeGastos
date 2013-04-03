@@ -102,6 +102,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.controlegastos.Opcoes" />
         </activity>
+        <activity
+            android:name="com.example.controlegastos.TelaPlanilha"
+            android:label="@string/title_activity_visualiza_poupancas"
+            android:parentActivityName="com.example.controlegastos.TelaPrincipal" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.controlegastos.TelaPlanilha" />
+        </activity>
+        <activity
+            android:name="com.example.controlegastos.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
     </application>
 
 </manifest>

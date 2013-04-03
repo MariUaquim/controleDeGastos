@@ -10,16 +10,16 @@
     <string name="title_activity_alterar_saldo">Alterar o Saldo</string>
     <string name="title_activity_nome_recurso">Nome do Recurso</string>
     <string name="title_activity_relatorios">Relatorios</string>
+    <string name="btn_cadastrar_planilha">Cadastrar Planilha</string>
     <string name="btn_cadastro_poupanca">Cadastar Poupanca</string>
     <string name="btn_cadastro_ganho">Cadastrar Ganho</string>
-    <string name="btn_alterar_saldo">Alterar Saldo</string>
     <string name="btn_cadastro_gasto">Cadastrar Gasto</string>
+    <string name="btn_alterar_saldo">Alterar Saldo</string>
     <string name="btn_relatorios">Relatorios</string>
     <string name="btn_transferencia">Transferir Dinheiro</string>
     <string name="btn_visualiza_ganhos">Visualizar Ganhos</string>
     <string name="btn_visualiza_gastos">Visualizar Gastos</string>
     <string name="btn_visualizar_poupancas">Visualizar Poupanças</string>
-    <string name="btn_cadastrar_planilha">Cadastrar Planilha</string>
     <string name="btn_opcoes">Opções</string>
     <string name="txv_operacoes">Operacoes</string>
     <string name="txv_saldo">Saldo: R$</string>
@@ -28,16 +28,24 @@
     <string name="txv_nome_planilha">Nome da Planilha</string>
     <string name="txv_tipo_planilha">Tipo da Planilha</string>
     <string name="lbl_planilhas">Planilhas:</string>
-    <string name="edit_novo_valor">Informe o novo valor</string>
-    <string name="btn_confirma">Confirma</string>
+    <string name="edit_novo_valor">valor</string>
+    <string name="btn_confirma">Confirmar</string>
+    <string name="btn_cancelar">Cancelar</string>
     <string name="txv_nome_ganho">Nome do ganho</string>
     <string name="txv_nome_gasto">Nome do gasto</string>
-    <string name="edit_nome_ganho">Informe o nome do ganho</string>
-    <string name="edit_nome_gasto">Informe o nome do gasto</string>
-    <string name="edit_nome_planilha">Nome da nova planilha</string>
+    <string name="txv_data_inicio">Data de inicio</string>
+    <string name="txv_tipo_pagamento">Forma de pagamento</string>
+    <string name="txv_parcelas">nº de parcelas</string>
+    <string name="edit_nome_ganho">Nome do Ganho</string>
+    <string name="edit_nome_gasto">Nome do Gasto</string>
+    <string name="edit_nome_planilha">Nome da Planilha</string>
     <string name="txv_valor">Valor</string>
     <string name="edit_valor">Informe o valor</string>
+    <string name="edit_meta">valor a alcançar</string>
+    <string name="edit_credito">Parcelas</string>
     <string name="txv_categoria">Categoria</string>
+    <string name="txv_meta">Meta(em Reais)</string>
+    <string name="item_prompt">item_prompt</string>
 
     <string-array name="categoria_array">
         <item>Comida</item>
@@ -47,11 +55,30 @@
         <item>Imposto</item>
         <item>Conta</item>
     </string-array>
+    <string-array name="mesesOptions">
+        <item>Janeiro</item>
+        <item>Fevereiro</item>
+        <item>Março</item>
+        <item>Abril</item>
+        <item>Maio</item>
+        <item>Junho</item>
+        <item>Julho</item>
+        <item>Agosto</item>
+        <item>Setembro</item>
+        <item>Outubro</item>
+        <item>Novembro</item>
+        <item>Dezembro</item>
+    </string-array>
+    <string-array name="tipoPagamento">
+        <item>a vista</item>
+        <item>a credito</item>
+    </string-array>
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_operacoes_planilha">Operacoes_planilha</string>
     <string name="title_activity_opcoes">Opcoes</string>
     <string name="title_activity_cadastrar_planilha">CadastrarPlanilha</string>
     <string name="title_activity_visualiza_poupancas">VisualizaPoupancas</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>

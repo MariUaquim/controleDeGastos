@@ -5,10 +5,34 @@
     tools:context=".Relatorios"
     android:background="@color/black"
     android:orientation="vertical" 
-    android:id="@+id/layout_relatorios">
+    >
     
-   
-
+   <Spinner
+    	android:id="@+id/mesesOptions"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:background="@color/white"
+    	android:layout_margin="5dp"/>
+	 
+	 <LinearLayout
+	     android:id="@+id/layout_relatorios" 
+         android:layout_width="wrap_content"      
+	     android:layout_height="wrap_content"
+         android:orientation="vertical">
+         
+    </LinearLayout>
+	 
+	 <Button
+     android:id="@+id/btn_voltar"
+     android:layout_width="wrap_content"      
+	 android:layout_height="wrap_content"
+     android:text="voltar"
+     android:layout_gravity="center_horizontal"
+     android:onClick="voltar"
+     android:background="@color/light_green"
+     android:layout_margin="5dp"
+     android:padding="5dp"
+     />
     
 
 </LinearLayout>

@@ -1,19 +1,41 @@
 package com.example.controlegastos;
 
+import java.util.List;
+
+import models.Planilha;
 import android.os.Bundle;
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.graphics.Color;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 
+@SuppressLint("NewApi")
 public class VisualizaPoupancas extends Activity {
 
+	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_visualiza_poupancas);
-		// Show the Up button in the action bar.
-		getActionBar().setDisplayHomeAsUpEnabled(true);
+		//Show the Up button in the action bar.
+		//getActionBar().setDisplayHomeAsUpEnabled(true);
+		
+		LinearLayout layout = (LinearLayout) this.findViewById(R.id.lt_visualiza_poupanca);
+		
+		List<Planilha> lista = Planilha.findByTipo(2);
+		int j = 0;
+		while(lista.size() > j){
+			Planilha pla = lista.get(j);
+			TextView tvPlanilha=new TextView(this);
+			tvPlanilha.setText(pla.getNome()+" "+pla.getMeta());
+			tvPlanilha.setTextColor(Color.parseColor("#FFFFFF"));	
+			layout.addView(tvPlanilha);
+			j++;
+		}
 	}
 
 	@Override
